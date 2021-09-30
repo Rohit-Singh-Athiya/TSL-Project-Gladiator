@@ -15,7 +15,7 @@ public class C_OneWayFlight
 	{
 		this.driver=driver;
 	}   
-	
+	 
      @FindBy(id = "FromSector_show") WebElement from; // From Location
      @FindBy(id = "Editbox13_show") WebElement to;     // To destination
      @FindBy(id = "airport12") WebElement from_airport; // Airport from

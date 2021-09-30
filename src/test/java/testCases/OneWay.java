@@ -7,6 +7,7 @@ import util.BeforeAfter;
 import util.BrowserFactory;
 
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,10 +25,11 @@ public class OneWay extends BeforeAfter
   
   @Test(priority = 1,enabled =true,description = "Passing the Test Case")  
   public void oneWayTest1() throws Exception
-  {   driver.get("https://www.easemytrip.com/");
+  {   
+	  driver.get("https://www.easemytrip.com/");
       driver.manage().deleteAllCookies();
 	  C_OneWayFlight obj =  PageFactory.initElements(driver, C_OneWayFlight.class); 
-	  obj.searchOneWay4("admin123@gmail.com" , "Harrison" ,"Wells", "8888855555");
+	  obj.searchOneWay4("harrypotter@gmail.com","harry","potter","9998887744");
 	  String chc = driver.getCurrentUrl();
 	  Assert.assertTrue(chc.contains("CheckOut"), "https://flight.easemytrip.com/Review/CheckOut?CSU=&SearchID=4wj4xhewd3q&ft=7&bc=&ISWL=");
   }
@@ -47,23 +49,23 @@ public class OneWay extends BeforeAfter
   @Test(priority = 3,enabled =true,description = "Error With contact number")    
   public void oneWayTest3() throws Exception 
   {    driver.get("https://www.easemytrip.com/");
-      driver.manage().deleteAllCookies();
-	  C_OneWayFlight obj =  PageFactory.initElements(driver, C_OneWayFlight.class);
-	  obj.searchOneWay4("admin123@gmail.com" , "Cisco","West","22");
-	  Thread.sleep(3000);
-	  String cn = driver.findElement(By.id("spanError")).getText();
-	  Assert.assertTrue(cn.contains("mobile number"), "Please enter a valid mobile number");
+       driver.manage().deleteAllCookies();
+	   C_OneWayFlight obj =  PageFactory.initElements(driver, C_OneWayFlight.class);
+	   obj.searchOneWay4("admin123@gmail.com" , "Cisco","West","22");
+	   Thread.sleep(3000);
+	   String cn = driver.findElement(By.id("spanError")).getText();
+	   Assert.assertTrue(cn.contains("mobile number"), "Please enter a valid mobile number");
   }
   
   @Test( priority = 4 ,enabled =true,description = "Error With First Name")  
   public void oneWayTest4() throws Exception
   {    driver.get("https://www.easemytrip.com/");
        driver.manage().deleteAllCookies();
-	  C_OneWayFlight obj =  PageFactory.initElements(driver, C_OneWayFlight.class);
-	  obj.searchOneWay4("admin123@gmail.com" , " ","Wells", "8888899999");
-	  Thread.sleep(3000);
-	  String firstn = driver.findElement(By.id("spanErrorAdult0")).getText();
-	  Assert.assertTrue(firstn.contains("First Name"), "Adult 1 First Name should have minimum 1");
+	   C_OneWayFlight obj =  PageFactory.initElements(driver, C_OneWayFlight.class);
+	   obj.searchOneWay4("admin123@gmail.com" , " ","Wells", "8888899999");
+	   Thread.sleep(3000);
+	   String firstn = driver.findElement(By.id("spanErrorAdult0")).getText();
+	   Assert.assertTrue(firstn.contains("First Name"), "Adult 1 First Name should have minimum 1");
   }
   
   
@@ -106,6 +108,17 @@ public class OneWay extends BeforeAfter
 					driver.findElement(By.className("plus_boxChd")).click();					
 					
 	}
+
+
+
+@DataProvider(name ="positive")
+public Object[][] dataset1()
+{
+	return new Object[][]
+	   {
+	     	{"admin123@gmail.com" , "Harrison" ,"Wells", "8888855555"},
+	     	{"Harrypotter@gmail.com" , "Harry" ,"Potter", "9898989898"}	
+		     	    };
 }
-  
+}  
 
