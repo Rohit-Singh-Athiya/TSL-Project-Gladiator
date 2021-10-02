@@ -4,14 +4,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 
 public class BeforeAfter
 {    
 	public WebDriver driver;
 	@BeforeTest
-	  public void beforeTest() throws Exception
+	@Parameters("browser")
+	  public void beforeTest(String browserName) throws Exception
 	      {
-	         driver = BrowserFactory.startBrowser("Chrome");
+	         driver = BrowserFactory.startBrowser(browserName);
 	         Thread.sleep(4000);
 		  }
 
@@ -21,4 +24,43 @@ public class BeforeAfter
 		  Thread.sleep(5000);
 		  driver.quit();
 	  }
+    
+    @DataProvider(name ="positive")
+    public Object[][] dataset1()
+    {
+    	return new Object[][]
+    	   {
+    	     	{"admin123@gmail.com" , "Harrison" ,"Wells", "8888855555"},
+    	     	{"Harrypotter@gmail.com" , "Harry" ,"Potter", "9898989898"}	
+    		     	    };
+    }
+
+
+    @DataProvider(name = "test1data")
+	 public Object[][] getData() 
+	 {
+		Object data[][] = testData("C:\\LTI-Eclipse Workspace\\easeMyTripDemo1\\Excel\\data.xlsx","Sheet1");
+		return data;
+	 }
+    
+    public  Object[][] testData(String excelPath,String sheetName) 
+	{
+		ExcelUtils excel = new ExcelUtils(excelPath,sheetName);
+		
+		int rowCount = excel.getRowCount();
+		int colCount = excel.getColCount();
+	
+	Object data[][] = new Object[rowCount-1][colCount];	
+		
+		for (int i =1;i<rowCount;i++) {
+			for(int j=0;j<colCount;j++){
+				String cellData = excel.getCellDataString(i, j);  
+				System.out.print(cellData+" | ");
+				data[i-1][j] = cellData;
+			}
+		  System.out.println();
+		}
+		return data;
+		
+    }
 }

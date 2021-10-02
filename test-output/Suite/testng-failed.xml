@@ -2,12 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="testCases.OneWay">
         <methods>
           <include name="beforeTest"/>
+          <include name="oneWayTest1"/>
           <include name="afterTest"/>
-          <include name="oneWayTestnil"/>
         </methods>
       </class> <!-- testCases.OneWay -->
     </classes>

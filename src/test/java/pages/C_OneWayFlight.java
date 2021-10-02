@@ -62,6 +62,70 @@ public class C_OneWayFlight
     	 classoftravel.click();
     	 economy.click();
     	 srch_btn.click();
+    	 Thread.sleep(4000);
+    	 book_now.click();
+    	 medical_insu.click();
+    	 travel_insu.click();
+    	 email.clear();
+    	 email.sendKeys(emailID);
+    	  if(emailID.contains("@"))
+    		  {
+    		     continue_booking1.click();
+                 WebElement fp = driver.findElement(By.id("titleAdult0"));
+                 Select s1 = new Select(fp);
+                 s1.selectByVisibleText("MR");
+                 fname.clear();
+                 fname.sendKeys(FirstName);
+                 lastname.clear();
+                 lastname.sendKeys(lastName);
+                 Thread.sleep(2000);
+                 phn_no.click();
+                 phn_no.clear();
+                 phn_no.sendKeys(Contact);
+                    if(Contact.isBlank()) 
+                     { 
+                    	cnt_booking2.click();
+                       System.out.println("Please Enter a valid Contact Number");              	 
+                     }
+                    else if(FirstName.isBlank())
+                    { 
+                    	cnt_booking2.click();             	
+                        System.out.println("Please Enter a valid First Name "); 	
+                    } 
+                    else if(lastName.isEmpty()) 
+                    {
+                    	cnt_booking2.click();             	
+                        System.out.println("Please Enter a valid Last Name "); 
+                    }
+                   
+                  else 
+                     {
+                       Thread.sleep(2000);
+                       cnt_booking2.click();
+                     }
+    		   }
+    	else 
+    	  {
+    		continue_booking1.click();
+    		System.out.println("Enter Correct EmailID");  
+    	  }
+    	 
+    	 
+    	    	 
+     }
+     
+     
+     public void searchOneWay5(String emailID,String FirstName,String lastName,String Contact) throws Exception    // edits for fname 
+     {   
+    	 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    	 to.click();
+    	 to_airport.click();
+    	 calendar.click();
+    	 calender_date.click();
+    	 traveller.click();
+    	 classoftravel.click();
+    	 economy.click();
+    	 srch_btn.click();
     	 book_now.click();
     	 medical_insu.click();
     	 travel_insu.click();
