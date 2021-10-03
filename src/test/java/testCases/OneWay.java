@@ -35,29 +35,29 @@ public class OneWay extends BeforeAfter
   }
   
 
-  @Test( priority = 2 ,enabled =false,description = "Error With Email" )   
-  public void oneWayTest2() throws Exception
+  @Test( priority = 2 ,enabled =true,description = "Error With Email",dataProvider="test2data" )   
+  public void oneWayTest2(String email,String fName,String lName,String contact) throws Exception
   {    driver.get("https://www.easemytrip.com/");
 	  C_OneWayFlight obj =  PageFactory.initElements(driver, C_OneWayFlight.class);
-	  obj.searchOneWay4("abc","Cisco","Ramon","9885562171");
+	  obj.searchOneWay4(email,fName,lName,contact);
 	  Thread.sleep(3000);
       String em = driver.findElement(By.id("divErrorEmail")).getText();
 	  Assert.assertTrue(em.contains("email"), "Please enter a valid email Id");
   }
   
   
-  @Test(priority = 3,enabled =false,description = "Error With contact number")    
-  public void oneWayTest3() throws Exception 
+  @Test(priority = 3,enabled =true,description = "Error With contact number",dataProvider="test3data")    
+  public void oneWayTest3(String email,String fName,String lName,String contact) throws Exception 
   {    driver.get("https://www.easemytrip.com/");
        driver.manage().deleteAllCookies();
 	   C_OneWayFlight obj =  PageFactory.initElements(driver, C_OneWayFlight.class);
-	   obj.searchOneWay4("admin123@gmail.com" , "Cisco","West","22");
+	   obj.searchOneWay4(email,fName,lName,contact);
 	   Thread.sleep(3000);
 	   String cn = driver.findElement(By.id("spanError")).getText();
 	   Assert.assertTrue(cn.contains("mobile number"), "Please enter a valid mobile number");
   }
   
-  @Test( priority = 4 ,enabled =false,description = "Error With First Name")  
+  @Test( priority = 4 ,enabled =true,description = "Error With First Name")  
   public void oneWayTest4() throws Exception
   {    driver.get("https://www.easemytrip.com/");
        driver.manage().deleteAllCookies();
@@ -69,7 +69,7 @@ public class OneWay extends BeforeAfter
   }
   
   
-  @Test(priority = 5,enabled =false,description = "Error With Last Name") 
+  @Test(priority = 5,enabled =true,description = "Error With Last Name") 
   public void oneWayTest5() throws Exception
   {  
 	  driver.get("https://www.easemytrip.com/");
@@ -82,7 +82,7 @@ public class OneWay extends BeforeAfter
   }
   
   
-  @Test(priority = 6,enabled =false,description="Alert-Source and Destination Cannot be Same")  
+  @Test(priority = 6,enabled =true,description="Alert-Source and Destination Cannot be Same")  
   public void oneWayTest6() throws Exception
   
   {   driver.get("https://www.easemytrip.com/");

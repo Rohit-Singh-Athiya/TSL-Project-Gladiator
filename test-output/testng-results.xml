@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="7" total="9" passed="2" failed="0" skipped="0">
+<testng-results ignored="2" total="10" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-02T18:05:58Z" name="Suite" finished-at="2021-10-02T18:06:57Z" duration-ms="59234">
+  <suite started-at="2021-10-03T04:09:15Z" name="Suite" finished-at="2021-10-03T04:11:46Z" duration-ms="150966">
     <groups>
     </groups>
-    <test started-at="2021-10-02T18:05:58Z" name="Test" finished-at="2021-10-02T18:06:57Z" duration-ms="59234">
+    <test started-at="2021-10-03T04:09:15Z" name="Test" finished-at="2021-10-03T04:11:46Z" duration-ms="150966">
       <class name="testCases.OneWay">
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:testCases.OneWay@4f3bbf68]" started-at="2021-10-02T18:05:58Z" name="beforeTest" finished-at="2021-10-02T18:06:05Z" duration-ms="7268" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:testCases.OneWay@5be46f9d]" started-at="2021-10-03T04:09:15Z" name="beforeTest" finished-at="2021-10-03T04:09:22Z" duration-ms="7169" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="oneWayTest1(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:testCases.OneWay@4f3bbf68]" started-at="2021-10-02T18:06:07Z" name="oneWayTest1" description="Passing the Test Case" data-provider="test1data" finished-at="2021-10-02T18:06:32Z" duration-ms="25563" status="PASS">
+        <test-method signature="oneWayTest1(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:testCases.OneWay@5be46f9d]" started-at="2021-10-03T04:09:24Z" name="oneWayTest1" description="Passing the Test Case" data-provider="test1data" finished-at="2021-10-03T04:09:49Z" duration-ms="25298" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -44,7 +44,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- oneWayTest1 -->
-        <test-method signature="oneWayTest1(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:testCases.OneWay@4f3bbf68]" started-at="2021-10-02T18:06:32Z" name="oneWayTest1" description="Passing the Test Case" data-provider="test1data" finished-at="2021-10-02T18:06:51Z" duration-ms="19206" status="PASS">
+        <test-method signature="oneWayTest1(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:testCases.OneWay@5be46f9d]" started-at="2021-10-03T04:09:49Z" name="oneWayTest1" description="Passing the Test Case" data-provider="test1data" finished-at="2021-10-03T04:10:08Z" duration-ms="19046" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -70,7 +70,97 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- oneWayTest1 -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:testCases.OneWay@4f3bbf68]" started-at="2021-10-02T18:06:51Z" name="afterTest" finished-at="2021-10-02T18:06:57Z" duration-ms="5479" status="PASS">
+        <test-method signature="oneWayTest2(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:testCases.OneWay@5be46f9d]" started-at="2021-10-03T04:10:08Z" name="oneWayTest2" description="Error With Email" data-provider="test2data" finished-at="2021-10-03T04:10:23Z" duration-ms="15141" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Harrison]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Wells]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[9988776655]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneWayTest2 -->
+        <test-method signature="oneWayTest2(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:testCases.OneWay@5be46f9d]" started-at="2021-10-03T04:10:23Z" name="oneWayTest2" description="Error With Email" data-provider="test2data" finished-at="2021-10-03T04:10:39Z" duration-ms="15733" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Barry234]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Barry]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Allen]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[9955113355]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneWayTest2 -->
+        <test-method signature="oneWayTest3(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:testCases.OneWay@5be46f9d]" started-at="2021-10-03T04:10:39Z" name="oneWayTest3" description="Error With contact number" data-provider="test3data" finished-at="2021-10-03T04:10:59Z" duration-ms="19976" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[levels@avicii.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[  Levels]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Avicii]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneWayTest3 -->
+        <test-method signature="oneWayTest4()[pri:4, instance:testCases.OneWay@5be46f9d]" started-at="2021-10-03T04:10:59Z" name="oneWayTest4" description="Error With First Name" finished-at="2021-10-03T04:11:18Z" duration-ms="19367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneWayTest4 -->
+        <test-method signature="oneWayTest5()[pri:5, instance:testCases.OneWay@5be46f9d]" started-at="2021-10-03T04:11:18Z" name="oneWayTest5" description="Error With Last Name" finished-at="2021-10-03T04:11:38Z" duration-ms="19150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneWayTest5 -->
+        <test-method signature="oneWayTest6()[pri:6, instance:testCases.OneWay@5be46f9d]" started-at="2021-10-03T04:11:38Z" name="oneWayTest6" description="Alert-Source and Destination Cannot be Same" finished-at="2021-10-03T04:11:40Z" duration-ms="2881" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneWayTest6 -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:testCases.OneWay@5be46f9d]" started-at="2021-10-03T04:11:40Z" name="afterTest" finished-at="2021-10-03T04:11:46Z" duration-ms="5539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

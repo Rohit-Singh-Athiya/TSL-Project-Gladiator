@@ -25,23 +25,33 @@ public class BeforeAfter
 		  driver.quit();
 	  }
     
-    @DataProvider(name ="positive")
-    public Object[][] dataset1()
-    {
-    	return new Object[][]
-    	   {
-    	     	{"admin123@gmail.com" , "Harrison" ,"Wells", "8888855555"},
-    	     	{"Harrypotter@gmail.com" , "Harry" ,"Potter", "9898989898"}	
-    		     	    };
-    }
-
-
+   
     @DataProvider(name = "test1data")
-	 public Object[][] getData() 
+	 public Object[][] getData1() 
 	 {
 		Object data[][] = testData("C:\\LTI-Eclipse Workspace\\easeMyTripDemo1\\Excel\\data.xlsx","Sheet1");
 		return data;
 	 }
+    
+    @DataProvider(name ="test2data")
+    public Object[][] getData2()
+    {
+    	return new Object[][]
+    	   {
+    	     	{"admin12" , "Harrison" ,"Wells", "9988776655"},
+    	     	{"Barry234" , "Barry" ,"Allen", "9955113355"}	
+    		     	    };
+    }
+
+    @DataProvider(name = "test3data")
+  	 public Object[][] getData3() 
+  	 {
+  		Object data[][] = testData("C:\\LTI-Eclipse Workspace\\easeMyTripDemo1\\Excel\\data.xlsx","Sheet2");
+  		return data;
+  	 }
+    
+    
+    
     
     public  Object[][] testData(String excelPath,String sheetName) 
 	{

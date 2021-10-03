@@ -6,7 +6,12 @@
       <class name="testCases.OneWay">
         <methods>
           <include name="beforeTest"/>
+          <include name="oneWayTest3"/>
+          <include name="oneWayTest6"/>
+          <include name="oneWayTest5"/>
+          <include name="oneWayTest2"/>
           <include name="oneWayTest1"/>
+          <include name="oneWayTest4"/>
           <include name="afterTest"/>
         </methods>
       </class> <!-- testCases.OneWay -->
