@@ -11,26 +11,26 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserFactory
 {
-   static WebDriver driver;
+   static WebDriver driver;                                                       
    
    public static WebDriver startBrowser(String browserName) throws Exception
    {
-	   if(browserName.equalsIgnoreCase("Firefox")) 
+	   if(browserName.equalsIgnoreCase("Firefox"))                                                            // Checking for Browser parameter while ignoring the case   
 	   {
-		   System.setProperty("webdriver.gecko.driver", "src/test/resources/Drivers/geckodriver.exe");
-		   driver = new FirefoxDriver();
+		   System.setProperty("webdriver.gecko.driver", "src/test/resources/Drivers/geckodriver.exe");        // Specifying property name and path  
+		   driver = new FirefoxDriver();                                                                      // Initializing driver based on property
 	   }
-  else if(browserName.equalsIgnoreCase("Chrome")) 
+  else if(browserName.equalsIgnoreCase("Chrome"))                                                             // Checking for Browser parameter while ignoring the case   
         {
-	      System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver94.exe");
-	       driver = new ChromeDriver();
+	       System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver94.exe");    // Specifying property name and path 
+	       driver = new ChromeDriver();                                                                       // Initializing driver based on property
        }
   else 
        {
-	   System.out.println("Enter Correct browser name");
+	   System.out.println("Enter Correct browser name");           
        }
 	      
-	   driver.manage().window().maximize();
+	   driver.manage().window().maximize();                                                                   // Maximize browser window 
 	   
 	   return driver;
    }

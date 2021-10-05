@@ -6,9 +6,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pages.C_OneWayFlight;
-import util.BeforeAfter;
-
+import pages.OneWayFlightScript;
+import util.BeforeAfterTest;
+/*
 public class PositiveTest extends BeforeAfter {
  
 	  @Test  
@@ -23,3 +23,4 @@ public class PositiveTest extends BeforeAfter {
 	}
   }
 
+*/

@@ -1,45 +1,8 @@
 #key = value 
- url = https://www.easemytrip.com/
- from=FromSector_show
- to=Editbox13_show
- from_airport=airport12
- to_airport=airport3
- calendar=ddate
- calender_date=trd_0_10/10/2021
- traveller=drpNoTrv
- classoftravel=dropbtn_n10
- economy=chk_flt
- srch_btn=//body/form[@id='frmHome']/div[5]/div[2]/div[3]/div[1]/div[7]/input[1]
- book_now=//*[@id=\"ResultDiv\"]/div/div/div[4]/div[1]/div[1]/div[1]/div[6]/button[1]
- medical_insu=//*[@id=\"divReview\"]/div[15]/div[4]/div[1]/label
- travel_insu = //*[@id=\"divInsuranceTab\"]/div[3]/div[3]/label
- email = txtEmailId
- continue_booking1 = spnVerifyEmail
- tra_det_cb = cmark_cbox
- gdr_title = select_trvl
- gdr_MR=
- 
-    @FindBy(id = "FromSector_show") WebElement from; // From Location
-     @FindBy(id = "Editbox13_show") WebElement to;     // To destination
-     @FindBy(id = "airport12") WebElement from_airport; // Airport from
-     @FindBy(id = "airport3") WebElement to_airport;   // Airport To
-     @FindBy(id = "ddate") WebElement calendar;        // calendar
-     @FindBy(id = "trd_0_10/10/2021") WebElement calender_date;        // select date
-     @FindBy(className = "drpNoTrv") WebElement traveller;  
-     @FindBy(className = "dropbtn_n10") WebElement classoftravel;   // select Class 
-     @FindBy(className = "chk_flt") WebElement economy;
-     @FindBy(xpath = "//body/form[@id='frmHome']/div[5]/div[2]/div[3]/div[1]/div[7]/input[1]") WebElement srch_btn;    // Search Button
-     @FindBy(xpath = "//*[@id=\"ResultDiv\"]/div/div/div[4]/div[1]/div[1]/div[1]/div[6]/button[1]") WebElement book_now; // Click on Book Flight
-     @FindBy(xpath = "//*[@id=\"divReview\"]/div[15]/div[4]/div[1]/label") WebElement medical_insu;  // Selecting 'YES' in medical refund policy;
-     @FindBy(xpath = "//*[@id=\"divInsuranceTab\"]/div[3]/div[3]/label") WebElement travel_insu;  // Selecting 'NO' in travel insurance Policy;
-     @FindBy(name= "txtEmailId") WebElement email;
-     @FindBy(id = "spnVerifyEmail") WebElement continue_booking1; 
-     @FindBy(className = "cmark_cbox") WebElement tra_det_cb;  // Traveller details Check box
-     @FindBy(className = "select_trvl") WebElement gdr_title;   // Select gender title
-     @FindBy(xpath = "//*[@id=\"titleAdult0\"]/option[2]") WebElement gdr_MR;   // Selecting MR 
-     @FindBy(name= "txtFNAdult0") WebElement fname;    // for sending first name 
-     @FindBy(name= "txtLNAdult0") WebElement lastname;  // for sending last name
-     @FindBy(id = "txtCPhone") WebElement phn_no;   // phone number 
-     @FindBy(id = "divContinueTransactionSCD") WebElement cnt_booking2;
-     
- 
+url = https://www.easemytrip.com/
+to = Editbox13_show
+airport = airport12
+class = optclass-name
+search = /html/body/form/div[5]/div[2]/div[3]/div[1]/div[7]/input
+
+  

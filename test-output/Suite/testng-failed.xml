@@ -4,13 +4,14 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases.OneWay">
+      <class name="testCases.OneWayFlightBookingTest">
         <methods>
+          <include name="oneWayTest4"/>
           <include name="beforeTest"/>
-          <include name="oneWayTest1"/>
+          <include name="oneWayTest5"/>
           <include name="afterTest"/>
         </methods>
-      </class> <!-- testCases.OneWay -->
+      </class> <!-- testCases.OneWayFlightBookingTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
